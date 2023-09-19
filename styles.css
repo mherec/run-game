@@ -1,0 +1,108 @@
+body {
+    margin: 0 auto;
+    background-color: #000000;
+    background-image: url('modules/img/background_use_small.png');
+    background-position: 0px 0px;
+    background-size: cover;
+    background-origin: border-box;
+    /* Rozciąga tło na całą szerokość i wysokość, zachowując proporcje */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.disable-selection {
+    -webkit-touch-callout: none;
+    /* iOS Safari                           */
+    -webkit-user-select: none;
+    /* Safari                               */
+    -khtml-user-select: none;
+    /* Konqueror HTML                       */
+    -moz-user-select: none;
+    /* Firefox w przeszłości (stare wersje) */
+    -ms-user-select: none;
+    /* Internet Explorer (>=10) / Edge      */
+    user-select: none;
+    /* Aktualnie wspierane przez:           */
+    /* Chrome, Opera and Firefox            */
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.loading {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    border: 16px solid rgba(252, 252, 252, 0.704);
+    border-radius: 50%;
+    border-top: 8px solid #000;
+    width: 150px;
+    height: 150px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+
+}
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 2s forwards;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    align-content: left;
+    align-items: left;
+
+}
+
+.menu {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: #dbdbdb;
+    border-bottom: #858585;
+}
